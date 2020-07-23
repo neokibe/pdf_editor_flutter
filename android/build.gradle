@@ -1,0 +1,43 @@
+group 'com.pdftron.pdftronflutter'
+version '2.0'
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.1'
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url "https://pdftron-maven.s3.amazonaws.com/release"
+        }
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 19
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+}
+
+dependencies {
+    // PDFTron SDK dependencies
+    implementation "com.pdftron:pdftron:7.1.4"
+    implementation "com.pdftron:tools:7.1.4"
+}

@@ -1,0 +1,10 @@
+
+.DS_Store
+*.iml
+*.lock
+.idea
+.packages
+example/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+example/.flutter-plugins-dependencies
+example/ios/Flutter/flutter_export_environment.sh
+.dart_tool/package_config.json
